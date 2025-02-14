@@ -1,0 +1,108 @@
+.active {
+    background-color: #1d4ed8;
+}
+
+.logo-img {
+    width: 80px; /* Adjusted size */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f172a;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    height: 50px;
+}
+
+nav .search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    margin-left: auto; /* Pushes the list to the right */
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    margin: 0 0.3rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+nav ul li a:not(.active):hover {
+    background-color: #172554;
+}
+
+.auth-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem; /* Space between links and icon */
+}
+
+.auth-icon a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem; /* Icon size */
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.auth-icon a:hover {
+    background-color: #172554;
+}
+
+
+/* Ensure content is not hidden behind fixed navbar */
+body {
+    padding-top: 60px; /* Adds space below navbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    nav .menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.2rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+    }
+}
